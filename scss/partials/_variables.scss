@@ -1,0 +1,22 @@
+// Color
+  $color-primary: #278da4;
+  $color-primary-light: lighten($color-primary, 10%);
+  $color-secondary: #b13c69;
+  $color-accent: #eeea72;
+
+  $white: #fff;
+
+  $color-shade: #eee;
+  $color-text: #343434;
+  $color-bg: #3acec2;
+  $color-bg-light: #009fe1;
+
+// Font
+  $font-stack-primary: 'Raleway', sans-serif;
+  $font-stack-secondary: 'Bree Serif', Serif;
+
+// Width
+  $max-width: 1000px;
+
+// Layout
+$gutter: 10px;

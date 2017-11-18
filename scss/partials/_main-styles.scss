@@ -1,0 +1,183 @@
+/* BASE ------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $color-text;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: $font-stack-primary;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: $font-stack-secondary;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin-bottom: 1.25em;
+  .intro & {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  // & is use to remove the space between a and :hover, to correctly select a:hover
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+/* HEADER & FOOTER ----------------------------------------- */
+
+.header {
+  height: 460px;
+  background: linear-gradient($color-bg-light, $color-bg),
+              url('../img/bg.jpg') no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  h1 {
+    margin-bottom: 0;
+    color: $white;
+    font-size: 4.8em;
+    letter-spacing: 1px;
+  }
+  p {
+    margin: 0;
+    color: $color-accent;
+    font-size: 1.25em;
+  }
+  @include skewed {
+    background-color: $white;
+    bottom: -25px;
+  }
+}
+
+.footer {
+  margin-top: 3.5em;
+  padding: 2em 0 0;
+  height: 100px;
+  background-color: $color-shade;
+  @include skewed {
+    background-color: $color-shade;
+    top: -25px;
+  }
+}
+
+/* CONTAINERS ---------------------------------------------- */
+
+.inner {
+  padding: 0.5em 1em;
+}
+
+.intro {
+  margin: auto;
+  padding: 1em 1em 3em;
+}
+
+/* COMPONENTS ----------------------------------------------- */
+
+.main-nav {
+  margin-top: 1em;
+  li {
+    display: inline-block;
+    margin: 0 0.65em;
+  }
+  a {
+    padding: 0.5em;
+    color: $white;
+    font-size: 0.85em;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: rgba($color-accent, 0.7);
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+  border: 1px solid $color-shade;
+  border-radius: .25em;
+  // >: Direct child
+  h1 {
+    margin: 0.35em 0 0;
+    line-height: 1.25;
+  }
+  h1 {
+    color: $color-primary;
+  }
+}
+
+.material-icons {
+  font-size: 2.35em;
+  color: $color-primary-light;
+}
+
+.btn {
+  &-callout {
+    @extend %btn;
+    font-size: 1.1em;
+    background-color: $color-secondary;
+  }
+
+  &-info {
+    @extend %btn;
+    margin-top: auto;
+    font-size: 0.85em;
+    background-color: $color-primary;
+  }
+}
+
+/* MEDIA QUERIES ------------------------------------------------- */
+
+@media (max-width: 575px) {
+  header {
+    height: 340px;
+  }
+  header h1 {
+    font-size: 3.4em;
+  }
+  .img-featured {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    @include center;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    background-position: 0 0, 0 45%;
+  }
+  .intro {
+    width: 45%;
+  }
+}
