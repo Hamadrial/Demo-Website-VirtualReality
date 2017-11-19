@@ -4,7 +4,7 @@
   "description": "[Virtual Reality Blog](https://hamadrial.github.io/Virtual-Reality-Blog/)",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/style.scss css/style.css -w" 
+    "watch:sass": "node-sass scss/style.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/Hamadrial/Virtual-Reality-Blog/issues"
   },
   "homepage": "https://github.com/Hamadrial/Virtual-Reality-Blog#readme",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^4.7.1"
   }
 }

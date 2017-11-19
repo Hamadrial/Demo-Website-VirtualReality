@@ -3,25 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Experience VR</title>
+
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/script.js"></script>
   </head>
 
   <body>
+    <nav>
+      <ul class="main-nav">
+        <li class="main-nav__item">
+          <a class="main-nav__link homeSect" scroll-to=".header" scroll-speed="1000" scroll-focus=".about" scroll-offset="-50">Home</a>
+        </li>
+
+        <li class="main-nav__item">
+          <a class="main-nav__link aboutSect" scroll-to=".about" scroll-speed="1000"
+          scroll-focus=".about" scroll-offset="-50" >About</a>
+        </li>
+      
+        <li class="main-nav__item">
+          <a class="main-nav__link resourcesSect" scroll-to=".main-content" scroll-speed="1000" scroll-offset="-80">Resources</a>
+        </li>
+      </ul>
+    </nav>
+
     <header class="header">
       <div class="inner">
-        <ul class="main-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <h1 class="header__heading">Experience VR</h1>
 
-        <h1>Experience VR</h1>
-
-        <p>
+        <p class="header__text">
           A simple blog about virtual reality experiences
         </p>
       </div> <!-- /.inner -->
@@ -29,6 +45,8 @@
 
     <section class="about">
       <div class="intro">
+        <img class="vr-icon" src="img/virtual-reality.png" alt="Virtual reality">
+
         <p>
           Virtual Reality is becoming well known as a form of entertainment, but it's also finding its way into fields like architecture,
           industrial design, healthcare, and so much more!
@@ -46,7 +64,7 @@
       <div class="card">
         <i class="material-icons icon">videocam</i>
 
-        <h1>Entertainment</h1>
+        <h1 class="heading-primary">Entertainment</h1>
 
         <p>
           Hundreds of VR games and films have been released already. 
@@ -60,7 +78,7 @@
       <div class="card">
         <i class="material-icons icon">account_balance</i>
 
-        <h1>Architectural Visualization</h1>
+        <h1 class="heading-primary">Architectural Visualization</h1>
 
         <p>
           These experiences allow you to explore and interact with buildings and products in virtual reality. 
@@ -74,7 +92,7 @@
       <div class="card">
         <i class="material-icons icon">school</i>
 
-        <h1>Education</h1>
+        <h1 class="heading-primary">Education</h1>
 
         <p>
           VR allows students to visit other places and other times. For instance, the BBC produced a 
@@ -88,7 +106,7 @@
       <div class="card">
         <i class="material-icons icon">flight_takeoff</i>
 
-        <h1>Simulation &amp; Training </h1>
+        <h1 class="heading-primary">Simulation &amp; Training </h1>
 
         <p>
           In simulation and training, you can safely train for dangerous situations or hazardous environments.
@@ -100,7 +118,7 @@
       <div class="card">
         <i class="material-icons icon">people</i>
 
-        <h1>Social Networking</h1>
+        <h1 class="heading-primary">Social Networking</h1>
 
         <p>
           VR is finding its way into teleconferencing and social media. At the 
@@ -114,7 +132,7 @@
       <div class="card">
         <i class="material-icons icon">videogame_asset</i>
 
-        <h1>Games</h1>
+        <h1 class="heading-primary">Games</h1>
 
         <p>
           VR games let users experience a 3D environment, creating suspension of disbelief, which makes users experience the environment as real.
@@ -125,7 +143,7 @@
     </div> <!-- /.main-content -->
 
     <footer class="footer">
-      <span>&copy;2017 Experience VR, The Blog</span>
+      <span>&copy; 2017 Experience VR, The Blog</span>
     </footer>
   </body>
 </html>

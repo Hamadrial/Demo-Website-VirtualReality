@@ -34,7 +34,7 @@ p {
 a {
   color: $color-primary;
   text-decoration: none;
-  // & is use to remove the space between a and :hover, to correctly select a:hover
+  
   &:hover {
     color: $color-secondary;
   }
@@ -43,24 +43,28 @@ a {
 /* HEADER & FOOTER ----------------------------------------- */
 
 .header {
-  height: 460px;
+  position: relative;
+  height: 90vh;
+  min-height: 100px;
   background: linear-gradient($color-bg-light, $color-bg),
               url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-  h1 {
+
+  &__heading {
     margin-bottom: 0;
     color: $white;
     font-size: 4.8em;
     letter-spacing: 1px;
   }
-  p {
+
+  &__text {
     margin: 0;
     color: $color-accent;
     font-size: 1.25em;
   }
   @include skewed {
-    background-color: $white;
+    background-color: $color-bg;
     bottom: -25px;
   }
 }
@@ -79,10 +83,18 @@ a {
 /* CONTAINERS ---------------------------------------------- */
 
 .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
   padding: 0.5em 1em;
 }
 
 .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: auto;
   padding: 1em 1em 3em;
 }
@@ -90,18 +102,37 @@ a {
 /* COMPONENTS ----------------------------------------------- */
 
 .about {
-  height: 95vh;
-  min-height: 61.75rem;
-  background-color: orangered;
+  position: relative;
+  height: 70vh;
+  min-height: 200px;
+  background-color: $color-bg;
+  
+  @include skewed {
+    background-color: $color-bg;
+    bottom: -25px;
+  }
+
+  .vr-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .main-nav {
-  margin-top: 1em;
-  li {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 1em 0;
+  background-color: rgba($color-primary, .7);
+
+  &__item {
     display: inline-block;
     margin: 0 0.65em;
   }
-  a {
+
+  &__link {
     padding: 0.5em;
     color: $white;
     font-size: 0.85em;
@@ -110,7 +141,16 @@ a {
     &:hover {
       color: rgba($color-accent, 0.7);
     }
+
+    &-active {
+      outline: none;
+      color: rgba($color-accent, 0.7);
+    }
   }
+}
+
+.main-content {
+  margin: 7rem 0;
 }
 
 .card {
@@ -119,12 +159,10 @@ a {
   padding: 1.5em 1em;
   border: 1px solid $color-shade;
   border-radius: .25em;
-  // >: Direct child
-  h1 {
+
+  .heading-primary {
     margin: 0.35em 0 0;
     line-height: 1.25;
-  }
-  h1 {
     color: $color-primary;
   }
 }
@@ -152,10 +190,10 @@ a {
 /* MEDIA QUERIES ------------------------------------------------- */
 
 @media (max-width: 575px) {
-  header {
+  .header {
     height: 340px;
   }
-  header h1 {
+  .header .header__heading {
     font-size: 3.4em;
   }
   .img-featured {
@@ -180,7 +218,7 @@ a {
 }
 
 @media (min-width: 992px) {
-  header {
+  .header {
     background-position: 0 0, 0 45%;
   }
   .intro {
