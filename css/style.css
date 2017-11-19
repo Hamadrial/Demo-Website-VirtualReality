@@ -184,7 +184,13 @@ a {
   .header .header__heading {
     font-size: 3.4em; }
   .img-featured {
-    display: none; } }
+    display: none; }
+  .intro {
+    padding: 0; }
+  .intro-text {
+    margin-bottom: .7rem; }
+  .btn-callout {
+    font-size: .8rem; } }
 
 @media (min-width: 576px) {
   .main-content {
