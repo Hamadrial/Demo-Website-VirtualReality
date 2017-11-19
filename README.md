@@ -1,2 +1,3 @@
 ### Github Pages
-[Virtual Reality Blog](https://hamadrial.github.io/Virtual-Reality-Blog/)
+This is a one pager responsive website. The website was built with HTML, CSS3 (SASS) and jQuery.
+[See the demo](https://hamadrial.github.io/Virtual-Reality-Blog/)
